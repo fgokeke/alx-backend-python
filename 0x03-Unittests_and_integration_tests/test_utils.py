@@ -73,13 +73,15 @@ class TestGetJson(unittest.TestCase):
 
 class TestMemoize(unittest.TestCase):
     """Tests the `memoize` function."""
-    class TestClass:
-        def a_method(self):
-            return 42
+    def test_memoize(self) -> None:
+        """Tests `memoize`'s output."""
+        class TestClass:
+            def a_method(self):
+                return 42
 
-        @memoize
-        def a_property(self):
-            return self.a_method()
+            @memoize
+            def a_property(self):
+                return self.a_method()
         with patch.object(
                 TestClass,
                 "a_method",
