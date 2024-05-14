@@ -10,7 +10,7 @@ from parameterized import parameterized, parameterized_class
 class TestGithubOrgClient(unittest.TestCase):
     """ Class for Testing Github Org Client """
 
-    @parameterized.expand ([
+    @parameterized.expand([
         ('google'),
         ('abc'),
     ])
@@ -20,4 +20,3 @@ class TestGithubOrgClient(unittest.TestCase):
         test_class = GithubOrgClient(input)
         test_class.org()
         mock.assert_called_once_with(f'https://api.github.com/orgs/{input}')
-
