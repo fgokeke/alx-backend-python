@@ -4,6 +4,7 @@
 
 from client import GithubOrgClient
 from unittest.mock import patch, PropertyMock, Mock
+import unittest
 from parameterized import parameterized, parameterized_class
 
 
