@@ -5,9 +5,15 @@ Unit tests for utils.access_nested_map function.
 
 
 import unittest
+from unittest.mock import patch, Mock
 from parameterized import parameterized
 from typing import Dict, Tuple, Union
-from utils import access_nested_map
+
+from utils import (
+    access_nested_map,
+    get_json,
+    memoize,
+)
 
 
 class TestAccessNestedMap(unittest.TestCase):
